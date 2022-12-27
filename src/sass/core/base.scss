@@ -1,0 +1,46 @@
+*,
+:after,
+:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+body,
+html {
+	min-width: $min-width;
+	vertical-align: baseline;
+}
+
+html {
+	height: 100%;
+  box-sizing: border-box;
+	font-size: $rem;
+}
+
+body {
+	min-height: 100%;
+	font-family: $font-family;
+	font-weight: $regular;
+	font-size: $font-size;
+	line-height: $line-height;
+	background-color: $background;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}

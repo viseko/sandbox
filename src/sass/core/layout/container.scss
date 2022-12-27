@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+	width: 100%;
+  max-width: $container-width;
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+
+	@media (max-width: $sm) {
+		padding-left: $container-padding-sm;
+		padding-right: $container-padding-sm;
+	}
+}
