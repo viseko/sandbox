@@ -37,3 +37,13 @@ export const path = {
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
 }
+
+export const resolves = {
+	html: [
+		["@img", "assets/img"]
+	],
+	css: [
+		["@img", "../img"],
+		["@fonts", "../fonts"],
+	]
+}

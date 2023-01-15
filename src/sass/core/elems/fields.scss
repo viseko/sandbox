@@ -1,0 +1,10 @@
+.field {
+  &__placeholder {}
+  
+  &__error {}
+
+  input,
+  textarea {
+    padding: 1rem 1.5rem;
+  }
+}

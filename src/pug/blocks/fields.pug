@@ -1,0 +1,47 @@
+mixin field(options)
+  -var type = options.type || "text"
+  -var id = options.id 
+  -var name = options.name 
+  -var required = options.required 
+  -var placeholder = options.placeholder
+  -var inputPlaceholder = options.inputPlaceholder
+  -var errorText = options.errorText
+  -var className = options.className 
+  -var value = options.value || ""
+  -var icon = options.icon
+  -var label = options.label
+
+  -var jsClass = ""
+
+  if (type === "text" || type === "textarea")
+    -jsClass = "js-input"
+  if (type === "tel")
+    -jsClass = "js-input-phone"
+  if (type === "email")
+    -jsClass = "js-input-email"
+
+  -var classNames = [className]
+
+  if (jsClass)
+    -classNames.push(jsClass)
+
+  .field(class=classNames.join(" "))
+    if (label && id) 
+      label.field__label(for=id)=label
+    if (type === "textarea")
+      textarea(required=required, name=name, id=id, autocomplete="off")
+        =value
+    else 
+      input(type=type,
+        id=id,
+        name=name,
+        required=required,
+        value=value,
+        placeholder=inputPlaceholder)
+    if (placeholder)
+      .field__placeholder=placeholder
+    if (errorText)
+      .field__error=errorText
+    if (icon)
+      .field__icon
+        +icon(icon, 24, 24)

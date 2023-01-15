@@ -1,0 +1,175 @@
+extends core/layout
+
+block body
+  .container 
+    h1 UI Kit
+  .container.container--ui 
+    aside.ui-aside
+      ul.ui-nav
+        li
+          a(href="#typography") Типографика
+        li
+          a(href="#btn-links") Кнопки и ссылки 
+        li
+          a(href="#tables") Таблицы
+        li
+          a(href="#forms") Форма и поля ввода
+        li
+          a(href="#modals") Модальные окна
+        li
+          a(href="#tabs") Табы
+        li
+          a(href="#accordeons") Аккордеоны
+        li
+          a(href="#sliders") Слайдеры
+      
+    .ui-main
+      section#typography
+        h2 Типографика
+        .h1 Заголовок 1
+        .h2 Заголовок 2 
+        .h3 Заголовок 3
+        .h4 Заголовок 4
+        p Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение поставленных обществом и правительством задач. Разнообразный и богатый опыт рамки и место обучения кадров влечёт за собой интересный процесс внедрения модернизации модели развития.
+        p
+          i Курсив
+        p 
+          strong Жирный текст
+        p 
+          del Зачёркнутый текст
+        p
+          ins Подчёркнутый текст
+        p Текст с <mark>выделенным</mark> фрагментом
+        ul 
+          li Маркированный список
+          li Маркированный список
+          li Маркированный список
+        ol 
+          li Нумерованный список
+          li Нумерованный список
+          li Нумерованный список
+        blockquote <b>Цитата</b>. Для современного мира консультация с широким активом требует от нас анализа соответствующих условий активизации. Идейные соображения высшего порядка, а также консультация с широким активом требует определения и уточнения направлений прогрессивного развития. Следует отметить, что постоянное информационно-пропогандистское обеспечение нашей деятельности создаёт предпосылки качественно новых шагов для направлений прогрессивного развития.
+
+      section#btn-links
+        h2 Кнопки и ссылки
+        p 
+          a#link(href="#link") Ссылка
+        p 
+          button Обычная кнопка
+          =" "
+          a.btn#link-btn(href="#link-btn") Ссылка в виде кнопки
+          =" "
+          button(disabled) Неактивная кнопка
+      
+      section#tables
+        h2 Таблицы
+        .table-wrapper
+          table
+            caption Заголовок таблицы
+            thead 
+              tr
+                th thead
+                th thead
+                th thead
+                th thead
+                th thead
+                th thead
+                th thead
+                th thead
+            tfoot
+              tr
+                td tfoot
+                td tfoot
+                td tfoot
+                td tfoot
+                td tfoot
+                td tfoot
+                td tfoot
+                td tfoot
+            tbody
+              tr
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+              tr
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+              tr
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+              tr
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+              tr
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+                td tbody
+      section#forms
+        h2 Форма и поля ввода
+        form
+          h3 Форма с группами полей
+          fieldset 
+            legend Варианты подписей
+            p
+              +field({
+                inputPlaceholder: "Текстовое поле"
+              })
+            p
+              +field({
+                label: "Текстовое поле",
+                id: "testid"
+              })
+            p
+              +field({
+                placeholder: "Текстовое поле"
+              })
+          fieldset 
+            legend Типы полей
+            p
+              +field({
+                inputPlaceholder: "Текстовое поле"
+              })
+              +field({
+                type: "tel",
+                inputPlaceholder: "Телефон"
+              })
+              +field({
+                type: "email",
+                inputPlaceholder: "Email"
+              })
+              +field({
+                type: "textarea",
+                inputPlaceholder: "Textarea"
+              })
+              +field({
+                type: "number",
+                inputPlaceholder: "Число"
+              })

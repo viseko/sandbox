@@ -1,4 +1,28 @@
 button,
 .btn {
-	cursor: pointer;
+	display: inline-block;
+	padding: 1rem 2rem;
+	color: $cl-white;
+	font-size: 16px;
+	line-height: 2rem;
+	background-color: $cl-primary;
+	border: 0;
+	border-radius: $border-radius;
+	transition: background-color $tr-btn;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&:hover:not(:disabled) {
+		background-color: lighten($cl-primary, 10%);
+	}
+
+	&:active:not(:disabled) {
+		opacity: $click-opacity;
+	}
+
+	&:disabled {
+		background-color: rgba($cl-primary, 50%);
+	}
 }

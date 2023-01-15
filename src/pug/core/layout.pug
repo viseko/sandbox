@@ -1,5 +1,6 @@
 include vars
 include mixins
+include ../blocks/_blocks
 
 block vars
 
@@ -7,6 +8,11 @@ doctype html
 html(lang="ru")
   include head
   body
-    include header
-    block body
-    include footer
+    .page
+      include header
+      main.page__main
+        block body
+      include footer
+
+    script(src="assets/js/main.min.js") 
+    block scripts

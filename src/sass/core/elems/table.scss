@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+td,
+th {
+  padding: 1rem 2rem;
+  border: 1px solid $cl-black;
+}
+
+.table-wrapper {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}

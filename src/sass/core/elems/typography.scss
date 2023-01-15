@@ -18,32 +18,53 @@ h6 {
 
 .h1,
 h1 {
-	font-size: 48px;
-	line-height: 56px;
+	margin-bottom: 3rem;
+	font-size: 6rem;
+	line-height: 7rem;
 
   @media (max-width: $md) {
-		font-size: 32px;
-		line-height: 40px;
+		margin-bottom: 2rem;
+		font-size: 4rem;
   }
 }
 
 .h2,
 h2 {
-	font-size: 32px;
-	margin-bottom: 32px;
+	margin-bottom: 3rem;
+	font-size: 4rem;
+	line-height: 5rem;
+
+	@media (max-width: $md) {
+		margin-bottom: 2rem;
+		font-size: 3rem;
+		line-height: 3rem;
+	}
 }
 
 .h3,
 h3 {
-	font-size: 24px;
-	margin-bottom: 24px;
+	margin-bottom: 3rem;
+	font-size: 3rem;
+	line-height: 4rem;
+
+	@media (max-width: $md) {
+		margin-bottom: 2rem;
+		font-size: 20px;
+		line-height: 3rem;
+	}
 }
 
 .h4,
 h4 {
-	font-size: 18px;
-	line-height: 24px;
-	margin-bottom: 16px;
+	margin-bottom: 2rem;
+	font-size: 20px;
+	line-height: 3rem;
+
+	@media (max-width: $md) {
+		margin-bottom: 2rem;
+		font-size: 18px;
+		line-height: 3rem;
+	}
 }
 
 p,
@@ -56,10 +77,22 @@ p,
   }
 }
 
-// small {}
+ins,
+u {
+	text-decoration: none;
+	border-bottom: 1px solid rgba($cl-black, 30%);
+}
 
-// strong ()
+mark {
+	padding: 2px;
+	border-radius: 4px;
+	background-color: lighten($cl-black, 80%);
+}
 
-// ins {}
-
-// del {}
+blockquote {
+	display: block;
+	margin: 2rem 0;
+	padding: 1rem 2rem;
+	background-color: lighten($cl-black, 80%);
+	border-radius: $border-radius;
+}

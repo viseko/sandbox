@@ -1,6 +1,16 @@
 a {
-	color: #2168de;
+	color: $link-color;
 	font-size: inherit;
 	text-decoration: none;
+	border-bottom: 1px solid transparent;
   cursor: pointer;
+	transition: color $tr-btn, border-color $tr-btn;
+
+	&:hover {
+		border-color: rgba($link-color, 30%);
+	}
+
+	&:active {
+		opacity: $click-opacity;
+	}
 }

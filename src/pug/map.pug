@@ -1,0 +1,18 @@
+extends core/layout
+
+block body
+  -
+    var pages = [
+      ["index", "Главная страница"],
+      ["ui", "UI Kit"]
+    ]
+
+  mixin mapList 
+    each page in pages 
+      li
+        a(href=`${page[0]}.html`)=page[1] 
+
+  section 
+    .container 
+      ui 
+        +mapList

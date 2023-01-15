@@ -1,0 +1,47 @@
+.ui-main {
+  overflow: hidden;
+}
+
+.container--ui {
+  display: flex;
+  gap: 32px;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+.ui-aside {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+
+  @media (max-width: $md) {
+    width: 100%;
+  }
+}
+
+.ui-nav {
+  list-style: none;
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+
+  @media (max-width: $md) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem 3rem;
+    padding-top: 0;
+
+    a {
+      white-space: nowrap;
+    }
+  }
+}
+
+section#typography {
+  padding-top: 0;
+}
